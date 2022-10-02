@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逍遥骰PVE</title>
+    <link rel="stylesheet" href="./css/pve.css"/>
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio autoplay loop id="gamemp3">
+        <source src="./mp3/game.mp3" >
+    </audio>
+    <!-- 九宫格 -->
+    <div class="nineBox">
+        <!-- 左分数 -->
+        <span class="leftScore" id="leftScore">0</span>
+        <!-- 左九宫格 -->
+        <ul class="left" id="left">
+          <li><img src="./image/0.png" id="左1.1" onclick="layDice('左1.1')"></li>
+          <li><img src="./image/0.png" id="左1.2" onclick="layDice('左1.2')"></li>
+          <li><img src="./image/0.png" id="左1.3" onclick="layDice('左1.3')"></li>
+          <li><img src="./image/0.png" id="左2.1" onclick="layDice('左2.1')"></li>
+          <li><img src="./image/0.png" id="左2.2" onclick="layDice('左2.2')"></li>
+          <li><img src="./image/0.png" id="左2.3" onclick="layDice('左2.3')"></li>
+          <li><img src="./image/0.png" id="左3.1" onclick="layDice('左3.1')"></li>
+          <li><img src="./image/0.png" id="左3.2" onclick="layDice('左3.2')"></li>
+          <li><img src="./image/0.png" id="左3.3" onclick="layDice('左3.3')"></li>
+        </ul>
+        <!-- 骰子 -->
+        <img src="./image/0.png" class="dice" onclick="diceClick()" id="diceId">
+        <!-- 右九宫格 -->
+        <ul class="right" id="right">
+            <li><img src="./image/0.png" id="右1.1"></li>
+            <li><img src="./image/0.png" id="右1.2"></li>
+            <li><img src="./image/0.png" id="右1.3"></li>
+            <li><img src="./image/0.png" id="右2.1"></li>
+            <li><img src="./image/0.png" id="右2.2"></li>
+            <li><img src="./image/0.png" id="右2.3"></li>
+            <li><img src="./image/0.png" id="右3.1"></li>
+            <li><img src="./image/0.png" id="右3.2"></li>
+            <li><img src="./image/0.png" id="右3.3"></li>
+        </ul>
+        <!-- 右分数 -->
+        <span class="rightScore" id="rightScore">0</span>
+      </div>
+    <!-- 结束界面 -->
+    <div id="myModal" class="modal">
+        <!-- 弹窗内容 -->
+        <div class="modal-content">
+            <div class="modal-header"></div>
+            <div class="modal-body"></div>
+            <div class="modal-result"></div>
+            <div class="modal-footer">
+                <span id="showConfirmBtn" onclick="window.location.href = 'pve.html'">再战一局</span>
+                <span>&nbsp &nbsp &nbsp &nbsp</span>
+                <span id="showConcelmBtn" onclick="window.location.href = 'index.html'")>返回首页</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/pve.js"></script>
+
+</body>
+</html>
