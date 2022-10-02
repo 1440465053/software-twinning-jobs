@@ -1,0 +1,247 @@
+* {
+  /* 清除预设margin和padding */
+  margin: 0;
+  padding: 0;
+  /* 把borders和padding全都包含在定义的宽高里面 */
+  box-sizing: border-box;
+}
+body{
+    background-image: url("../image/index.jpg");
+    background-position:center
+}
+
+/* 游戏名 */
+h2 {
+  /* flex布局 */
+  display: flex;
+  /* 初始文字透明 */
+  color: transparent;
+  /* 文字水平垂直居中显示 */
+  justify-content: center;
+  align-items: center;
+  /* 字号 */
+  font-size: 5vw;
+}
+h2 span:nth-child(6) {
+  /* 单词间隙 */
+  margin-left: 5vw;
+}
+
+h2 span {
+  animation: LetterColor 3s linear infinite;
+  /* 计算每个字的动画起始时间 */
+  animation-delay: calc(0.1s * var(--o));
+}
+@keyframes LetterColor {
+  0% {
+      color: #fff;
+      /* 利用模糊距离不同的阴影实现霓虹灯光晕效果 */
+      text-shadow: 
+      0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff,
+      0 0 120px #00b3ff,
+      0 0 200px #00b3ff,
+      0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+      /* 设置高斯模糊与色调，实现模糊效果和颜色变换 */
+      filter: blur(2px) hue-rotate(0deg);
+  }
+  30%,
+  70% {
+      color: #fff;
+      /* 减少光晕大小 */
+      text-shadow: 
+      0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff,
+      0 0 120px #00b3ff,
+      0 0 200px #00b3ff;
+      /* 色调变换360度 */
+      filter: blur(2px) hue-rotate(360deg);
+  }
+  100% {
+      /* 动画结束字变透明 */
+      color: transparent;
+      /* 动画结束消除阴影 */
+      text-shadow: none;
+      /* 动画结束色调重置 */
+      filter: blur(2px) hue-rotate(0deg);
+  }
+}
+
+/* 轮播图 */
+#max{
+  width: 930px;
+  height: 530px;
+  align-items: center;
+  margin: 5% auto;
+  margin-top: 1%;
+}
+.re{
+  position: absolute;
+  width: 930px;
+  height: 530px;
+}
+.re ul{
+  list-style-type:none ;
+}
+.re ul>li{
+  width: 900px;
+  height: 500px;
+  position: absolute;
+
+  transition: 1s;
+  opacity: 0;
+}
+.re ul>li img{
+  width: 900px;
+  height: 500px;
+  border-radius: 10%;
+  border: 15px solid #fffbd6;
+}
+#max ol {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,75px);
+  grid-template-rows: auto;
+  grid-gap: 1em;gap: 1em;
+  float: right;
+  margin-right: 100px;
+  margin-top: 470px;
+  list-style: none;
+  top:0;left:0;
+}
+#max ol li {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  float: right;
+  text-align: center;
+  border-radius: 2em;
+  border: 5px solid #999999;
+}
+
+
+
+  /* 按钮 */
+
+  .frame {
+    width: 90%;
+    /* margin-left: 70px; */
+    /* margin-right: 40px; */
+    margin-top: -50px;
+    
+  }
+  button {
+    margin-left: 33%;
+  }
+  /* .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  } */
+  
+ 
+/* 按钮 */
+  .btn {
+    background: rgb(247, 150, 192);
+    background: radial-gradient(
+      circle,
+      rgba(247, 150, 192, 1) 0%,
+      rgba(118, 174, 241, 1) 100%
+    );
+    line-height: 42px;
+    padding: 0;
+    border: none;
+
+  }
+  .btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size:40px;
+    text-align: center;
+  }
+  .btn:before,
+  .btn:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+      -4px -4px 5px 0px rgba(255, 255, 255, 1),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  .btn:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  .btn:hover {
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+  }
+  .btn:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn span:before,
+  .btn span:after {
+    position: absolute;
+    content: "";
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+      -4px -4px 5px 0px rgba(255, 255, 255, 1),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  .btn span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 0.5px;
+    transition: all 500ms ease;
+  }
+  .btn span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 0.5px;
+    transition: all 500ms ease;
+  }
+  .btn span:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+  .btn span:hover:after {
+    width: 100%;
+    height: 100%;
+  }
+
+  
