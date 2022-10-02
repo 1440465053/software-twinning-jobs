@@ -1,0 +1,7 @@
+body{
+    background-image: url("../image/背景2.jpg");
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:100%;
+    /* background-color:bisque; */
+}   
