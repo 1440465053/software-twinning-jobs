@@ -139,20 +139,6 @@ function layDice(id){
 
 //电脑放置骰子
 function aiLayDice(){
-    // isNull = []
-    // for (var n = 1; n < 4; n++) {
-    //     for (var m = 1; m < 4; m++) {
-    //         if ((document.getElementById("右" + n + "." + m).src).match(/image\/0\.png/i)){
-    //             isNull.push("右" + n+ "." + m)
-    //         }
-    //     }    
-    // }
-    // if (isNull){
-    //     isNullIndex = Math.floor(Math.random() * isNull.length)
-    //     document.getElementById(isNull[isNullIndex]).src = rightArrays[index]
-    // }
-
-
     // 清空每行点数
     for (var n = 0; n <3; n++) {
         leftAllNum[n] = []
