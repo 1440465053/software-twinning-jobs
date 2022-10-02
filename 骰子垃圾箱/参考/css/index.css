@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "hanyi";
+    src:url('../HanyiSentyFlorCalligraphy.ttf');
+}
+body{
+    font-family: "hanyi";
+    background-color: #364375;
+}
+header{
+    background-color: white;
+    font-size:40px;
+    text-align: center;
+    padding:20px;
+    color:#25262e;
+}
+.score{
+    border:3px solid #fff;
+    width: 200px;
+    margin: 20px  auto;
+    border-radius:4px;
+    color:white;
+    text-align: center;
+    font-size:46px;
+    padding:15px 20px;
+    position: relative;
+}
+.score-label{
+    position: absolute;
+    color: white;
+    background-color: #e2584d;
+    font-size: 20px;
+    padding:3px 10px;
+}
+.user-label{
+    left:-18px;
+    top:25px;
+}
+.comp-label{
+    right:-28px;
+    top:25px;
+}
+.result{
+    text-align: center;
+    color: white;
+    font-size:60px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.choices{
+    text-align: center;
+    margin-top: 20px;
+}
+.choice{
+    display:inline-block;
+    width: 78px;
+    height: 78px;
+    border:4px solid white;
+    border-radius:50%;
+    margin:0 20px;
+}
+.message{
+    text-align: center;
+    color:white;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 35px;
+}
